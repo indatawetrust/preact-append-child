@@ -1,6 +1,6 @@
 {
   "name": "preact-append-child",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "module": "src/index.js",
   "main": "dist/preact-append-child.js",
   "repository": "indatawetrust/preact-append-child",
