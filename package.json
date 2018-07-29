@@ -1,0 +1,30 @@
+{
+  "name": "preact-append-child",
+  "version": "1.0.0",
+  "module": "src/index.js",
+  "main": "dist/preact-append-child.js",
+  "repository": "indatawetrust/preact-append-child",
+  "description": "Simple and lightweight append child component for Preact",
+  "license": "MIT",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "author": {
+    "name": "Ahmet Şimşek",
+    "email": "iamaroott@gmail.com",
+    "url": "http://indatawetrust.blogspot.com/"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "postbuild": "uglifyjs dist/preact-append-child.js -c -m -o dist/preact-append-child.min.js"
+  },
+  "devDependencies": {
+    "rollup": "^0.41.4",
+    "rollup-plugin-buble": "^0.15.0",
+    "uglify-js": "^2.7.5"
+  },
+  "peerDependencies": {
+    "preact": "^7.2.0"
+  }
+}
