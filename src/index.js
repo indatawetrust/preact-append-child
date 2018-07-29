@@ -9,7 +9,7 @@ export default class AppendChild extends Component {
     };
   }
   componentDidMount() {
-    if (this.props.child) {
+    if (this.props.child && document.querySelector('#' + this.state.id)) {
       if (this.props.beforeAppend) this.props.beforeAppend();
 
       document.querySelector('#' + this.state.id).appendChild(this.props.child);
@@ -19,7 +19,7 @@ export default class AppendChild extends Component {
   }
 
   componentWillReceiveProps(nextProps, nextState) {
-    if (this.props.child) {
+    if (this.props.child && document.querySelector('#' + this.state.id)) {
       document.querySelector('#' + this.state.id).innerHTML = '';
 
       if (this.props.beforeAppend) this.props.beforeAppend();

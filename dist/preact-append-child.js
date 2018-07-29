@@ -17,7 +17,7 @@ var AppendChild = (function (Component$$1) {
   AppendChild.prototype = Object.create( Component$$1 && Component$$1.prototype );
   AppendChild.prototype.constructor = AppendChild;
   AppendChild.prototype.componentDidMount = function componentDidMount () {
-    if (this.props.child) {
+    if (this.props.child && document.querySelector('#' + this.state.id)) {
       if (this.props.beforeAppend) { this.props.beforeAppend(); }
 
       document.querySelector('#' + this.state.id).appendChild(this.props.child);
@@ -27,7 +27,7 @@ var AppendChild = (function (Component$$1) {
   };
 
   AppendChild.prototype.componentWillReceiveProps = function componentWillReceiveProps (nextProps, nextState) {
-    if (this.props.child) {
+    if (this.props.child && document.querySelector('#' + this.state.id)) {
       document.querySelector('#' + this.state.id).innerHTML = '';
 
       if (this.props.beforeAppend) { this.props.beforeAppend(); }
